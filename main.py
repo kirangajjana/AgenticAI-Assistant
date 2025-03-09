@@ -5,10 +5,10 @@ from src.Services.Agent_Service import AgentService
 agent_service = AgentService()
 
 # Streamlit UI
-st.set_page_config(page_title="AI Agent System", layout="centered")
+st.set_page_config(page_title="AI AgenticScholar", layout="centered")
 
 # App Title
-st.title("🤖 AI Agentic System")
+st.title("🤖 AI AgenticScholar")
 
 # Description
 st.markdown("🚀 **Find the latest articles on Agentic AI**")
