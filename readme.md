@@ -117,5 +117,9 @@ Have questions? Feel free to reach out:
 ## ⭐ **Show Your Support!**
 If you found this project useful, **please ⭐ star the repository** on GitHub! It helps others find the project. 🚀🌟  
 
+
+## 🛠️ Project Demo  
+🚀 **Try the Live Demo Here:** [👉 Click to Try AI AgenticScholar](https://kirangajjana-agenticai-assistant-main-tumgfd.streamlit.app/)  
+
 ---
 
