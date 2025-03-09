@@ -2,7 +2,6 @@
 
 🚀 **Agentic AI Explorer** is an AI-powered research assistant that fetches the latest **top 5 articles** on **Agentic AI** using an intelligent agent-based search system. The tool is built using **Streamlit, OpenAI, and DuckDuckGo Search API**.
 
-![Agentic AI Search Demo](https://via.placeholder.com/1000x500?text=Demo+Image)  <!-- Replace with actual screenshot -->
 
 ---
 
@@ -36,7 +35,7 @@
 ## 🔧 **Installation & Setup**
 ### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/your-username/AgenticAI-Explorer.git
+git clone https://github.com/kirangajjana/AgenticAI-Assistant.git
 cd AgenticAI-Explorer
 ```
 
