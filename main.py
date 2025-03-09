@@ -38,8 +38,15 @@ if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
 if query:
+    # Ensure response is initialized to prevent NameError
+    response = agent_service.handle_query(query)
+
+    # Append user query & AI response to chat history
     st.session_state.chat_history.append(("🧑‍💻 You", query))
     st.session_state.chat_history.append(("🤖 AI", response))
+else:
+    st.warning("⚠️ Please enter a query before submitting.")
+
 
 # Display Chat History
 st.subheader("💬 Chat History")
