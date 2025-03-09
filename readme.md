@@ -1,6 +1,6 @@
-# 🤖 Agentic AI Explorer
+# 🤖 AI AgenticScholar
 
-🚀 **Agentic AI Explorer** is an AI-powered research assistant that fetches the latest **top 5 articles** on **Agentic AI** using an intelligent agent-based search system. The tool is built using **Streamlit, OpenAI, and DuckDuckGo Search API**.
+🚀 **AI AgenticScholar** is an AI-powered research assistant that fetches the latest **top 5 articles** on **Agentic AI** using an intelligent agent-based search system. The tool is built using **Streamlit, OpenAI, and DuckDuckGo Search API**.
 
 
 ---
