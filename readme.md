@@ -109,8 +109,8 @@ Want to contribute? Follow these steps:
 
 ## 📧 **Contact & Support**
 Have questions? Feel free to reach out:
-📩 **Email:** [your-email@example.com](mailto:your-email@example.com)  
-🌐 **GitHub Issues:** [Create an issue](https://github.com/your-username/AgenticAI-Explorer/issues)  
+📩 **Email:** [your-email@example.com](mailto:kiran.gajjana@gmail.com)  
+🌐 **GitHub Issues:** [Create an issue](https://github.com/kirangajjana/AgenticAI-Explorer/issues)  
 
 ---
 
