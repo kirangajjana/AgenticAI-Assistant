@@ -14,7 +14,7 @@ class OpenAIModel(BaseModel):
         if not self.api_key:
             raise ValueError("OpenAI API key not found. Set OPENAI_API_KEY as an environment variable.")
 
-        self.model = OpenAIChat(id=model_id, api_key=self.api_key)
+        self.model = OpenAIChat(id=model_id, api_key=self.api_key,temperature=0)
 
     def generate_response(self, query: str, tools=None):
         """Corrected method call to OpenAI API"""
