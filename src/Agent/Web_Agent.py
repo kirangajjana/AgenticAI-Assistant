@@ -7,29 +7,21 @@ class WebAgent(BaseAgent):
 
     
     def respond(self, query: str, stream=False):
-        """AI Agent only answers queries related to Agentic AI. Otherwise, it responds with a default message."""
+            """AI Agent first searches for external sources before responding."""
 
-        # Define allowed topics
-        allowed_keywords = ["Agentic AI", "AI Agents", "Multi-Agent Systems", "Autonomous Agents", "AI-powered research"]
-
-        # Step 1: Check if the Query is Relevant
-        if not any(keyword.lower() in query.lower() for keyword in allowed_keywords):
-            return "⚠️ I specialize in Agentic AI research. I don't have information on this topic."
-
-        # Step 2: Use Search Tool First (if available)
-        knowledge_base = ""
-        if self.tools:
-            search_results = self.tools[0].execute(query)
-            if search_results and isinstance(search_results, list):  
-                sources = "\n".join([f"- [{r['title']}]({r['link']})" for r in search_results])
-                knowledge_base = f"Here are the top sources I found:\n{sources}\n\n"
+            # Step 1: Use the Search Tool First
+            if self.tools:
+                search_results = self.tools[0].execute(query)  # Uses DuckDuckGo/Google Search
+                if search_results and isinstance(search_results, list):  
+                    sources = "\n".join([f"- [{r['title']}]({r['link']})" for r in search_results])
+                    knowledge_base = f"Here are the top sources I found:\n{sources}\n\n"
+                else:
+                    knowledge_base = "I couldn't find any relevant sources. Let me try answering from my knowledge.\n\n"
             else:
-                knowledge_base = "I could not find relevant sources. Let me generate an answer based on my knowledge.\n\n"
+                knowledge_base = "No search tool is available. Answering from my internal knowledge.\n\n"
 
-        # Step 3: Combine Search Results with AI Response
-        full_query = f"{knowledge_base}User Query: {query}"
-        response = self.model.generate_response(full_query)
+            # Step 2: Combine Search Results with AI Response
+            full_query = f"{knowledge_base}User Query: {query}"
+            response = self.model.generate_response(full_query)
 
-        return response
-
-        
+            return response
